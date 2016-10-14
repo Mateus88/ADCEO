@@ -1,0 +1,103 @@
+ul{
+	list-style: none;
+}
+
+/* FOOTER 
+================================================== */
+
+footer {
+	color:#777;
+	background:#222;
+	border-top:2px solid #444;
+}
+
+footer h1,footer h2,footer h3,footer h4{
+	color:#ddd;
+	font-weight:300;
+}
+
+#footerRights {
+	background-color:#333;
+	color:#999;
+	border-top:1px solid #1b1b1b;
+}
+
+/* END FOOTER 
+================================================== */
+
+ul.socialNetwork {padding:0; display: block; margin-bottom: 0;}
+ul.socialNetwork li {display:inline-block; list-style-type: none; margin-top: 0.8em;}
+
+/*** icons ***/
+.iconRounded {
+	color:#525252;
+	border: 1px solid #525252;
+}
+
+.iconRounded:hover, .color1 .iconRounded:hover,.iconLinks a:hover i, .boxIcon a:hover i{
+	background-color:#525252;
+	color:#fff;
+	border-color: #525252;
+}
+
+.color2 .iconRounded {
+	background-color:#525252;
+	color:#fff;
+	border: 1px solid #fff;
+}
+
+.color2 .iconRounded:hover,.color2 .boxIcon a:hover i {
+	background-color:#fff;
+	color:#525252;
+	border: 2px solid #525252;
+}
+
+.iconRounded{
+	border-radius:50%;
+	width: 40px;
+	height: 40px;
+	display: block;
+	text-align: center;
+	font-size:18px;	
+}
+
+.iconRounded:before{margin: auto;text-align: center; line-height: 40px; }
+.iconBig{
+	font-size: 40px;
+}
+
+.iconBig.iconRounded{
+	width:100px;
+	height: 100px;
+}
+
+.iconBig.iconRounded:before{
+	line-height: 100px;	
+}
+
+.iconMedium {
+	font-size: 33px;
+}
+
+.iconMedium.iconRounded{
+	width: 66px;
+	height: 66px;
+}
+
+.iconMedium.iconRounded:before{
+	line-height: 66px;	
+}
+
+.iconSmall:before {
+	font-size: 10px;
+}
+
+.iconSmall.iconRounded{
+	width: 26px;
+	height: 26px;
+}
+
+.iconSmall.iconRounded:before{
+	line-height: 26px;	
+}
+
