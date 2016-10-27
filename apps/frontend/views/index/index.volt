@@ -1,45 +1,151 @@
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <!-- Begin Header -->
 {%include "layouts/header.volt" %}
 <!-- End Header -->
-<div class="container-fluid" style="margin-top:50px;min-height:500px;">
+<div class="container  ">
 
-	<div class="heading-block text-center margin-bottom-40 margin-top-50 animate fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-        <h3>Notícias</h3>
-      </div>
+	<!--  BEGIN section news -->
+	<section>
+		<div
+			class="heading-block text-center margin-bottom-40 margin-top-50 animate fadeInUp"
+			data-wow-delay="0.2s"
+			style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+			<h3>Notícias</h3>
+		</div>
+		<div class="row">
+			<div id="posts">
+				<div class="post">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 1</h2>
+						<p>Description 1 click aqui para ver mais </p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 2</h2>
+						<p>Description 2</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 3</h2>
+						<p>Description 3</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div id="posts">
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 4</h2>
+						<p>Description 4</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 5</h2>
+						<p>Description 5</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 6</h2>
+						<p>Description 6</p>
+						<a class="preview" href="images/portfolio/full/item1.png"><i class="fa fa-eye"></i> View</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="text-center">
+					<a href="#" class="btn btn-info " >Ver mais</a>
+				</div>
+			</div>
+		</div>
 
-	<ul class="row">
-        <li class="col-md-3 animate fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
-          <div class="intro-in"> <img class="img-responsive" src="http://lorempixel.com/1200/400/sports" alt=""> <a href="animation-version/index.html" class="intro-hover" target="_blank"> VIEW DEMO </a>
-            <h5>DEMO 1</h5>
-          </div>
-        </li>
-        <li class="col-md-3 animate fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
-          <div class="intro-in"> <img class="img-responsive" src="http://lorempixel.com/1200/400/sports" alt=""> <a href="animation-version/main_coporate_1.html" class="intro-hover" target="_blank"> VIEW DEMO </a>
-            <h5>DEMO COPORATE</h5>
-          </div>
-        </li>
-        <li class="col-md-3 animate fadeIn" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;">
-          <div class="intro-in"> <img class="img-responsive" src="http://lorempixel.com/1200/400/sports" alt=""> <a href="animation-version/main_creative_2.html" class="intro-hover" target="_blank"> VIEW DEMO </a>
-            <h5>DEMO CREATIVE 2</h5>
-          </div>
-        </li>
-        <li class="col-md-3 animate fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
-          <div class="intro-in"> <img class="img-responsive" src="http://lorempixel.com/1200/400/sports" alt=""> <a href="animation-version/main_creative_3.html" class="intro-hover" target="_blank"> VIEW DEMO </a>
-            <h5>DEMO CREATIVE 3</h5>
-          </div>
-        </li>
-        <li class="col-md-3 animate fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
-          <div class="intro-in"> <img class="img-responsive" src="http://lorempixel.com/1200/400/sports" alt=""> <a href="animation-version/main_creative_4.html" class="intro-hover" target="_blank"> VIEW DEMO </a>
-            <h5>DEMO CREATIVE 4</h5>
-          </div>
-        </li>
-        <li class="col-md-3 animate fadeIn" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;">
-          <div class="intro-in"> <img class="img-responsive" src="http://lorempixel.com/1200/400/sports" alt=""> <a href="animation-version/main_creative_5.html" class="intro-hover" target="_blank"> VIEW DEMO </a>
-            <h5>DEMO CREATIVE 5</h5>
-          </div>
-        </li>
-      </ul>
+
+
+	</section>
+	<!--  END section news -->
+	<div
+		class="heading-block text-center margin-bottom-40 margin-top-50 animate fadeInUp"
+		data-wow-delay="0.2s"
+		style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+		<h3>Próximas atividades</h3>
+	</div>
+
+	<!--  BEGIN section agenda -->
+	<section>
+		<div class="row">
+			<div id="posts">
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 1</h2>
+						<p>Description 1</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 2</h2>
+						<p>Description 2</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 3</h2>
+						<p>Description 3</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="posts">
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 4</h2>
+						<p>Description 4</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 5</h2>
+						<p>Description 5</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 6</h2>
+						<p>Description 6</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--  END section agenda -->
 </div>
 <!-- Begin Footer -->
 {%include "layouts/footer.volt" %}
