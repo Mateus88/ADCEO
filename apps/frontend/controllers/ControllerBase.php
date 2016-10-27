@@ -9,7 +9,7 @@ class ControllerBase extends Controller
 	
 	public function indexAction()
 	{
-		
+		header('Content-Type: text/html; charset=UTF-8');
 	}
 
 }

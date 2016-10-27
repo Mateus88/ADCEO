@@ -9,6 +9,8 @@ class IndexController extends ControllerBase
     public function indexAction()
     {
     	$this->tag->setTitle("ADCEO");
+    	
+    	$this->view->page="Home";
     }
     
 

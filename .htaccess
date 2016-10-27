@@ -2,4 +2,5 @@
     RewriteEngine on
     RewriteRule  ^$ public/    [L]
     RewriteRule  ((?s).*) public/$1 [L]
+	AddDefaultCharset utf-8
 </IfModule>
