@@ -7,16 +7,16 @@
 			 	<h3>Patrocinadores</h3>
 			 	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
 			 	<div class="col-lg-3 col-md-3 col-sm-3">
-			 		<img src="{{url('public/img/pattern1.png')}}" class="img-responsive">
+			 		<img src="public/img/pattern1.png" class="img-responsive">
 			 	</div>
 			 	<div class="col-lg-3 col-md-3 col-sm-3">
-			 		<img src="{{url('public/img/pattern1.png')}}" class="img-responsive">
+			 		<img src="public/img/pattern1.png" class="img-responsive">
 			 	</div>
 			 	<div class="col-lg-3 col-md-3 col-sm-3">
-			 		<img src="{{url('public/img/pattern1.png')}}" class="img-responsive">
+			 		<img src="public/img/pattern1.png" class="img-responsive">
 			 	</div>
 			 	<div class="col-lg-3 col-md-3 col-sm-3">
-			 		<img src="{{url('public/img/pattern1.png')}}" class="img-responsive">
+			 		<img src="public/img/pattern1.png" class="img-responsive">
 			 	</div>
 		 	</div><!-- --/row ---->
 		 </div><!-- --/container ---->
@@ -57,7 +57,7 @@
 	 	</div><!-- --/container ---->
 </footer>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/bootstrap.j"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="js/filterable.js"></script>
 <script type="text/javascript" src="js/filterable.pack.js"></script>
