@@ -4,7 +4,7 @@
     "monolog/monolog": "^1.4",
     "twig/twig": "^1.8",
     "symfony/twig-bridge": "^2",
-    "ext-phalcon": ">=3.0.1"
+    "ext-phalcon": ">=1.3.0"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
