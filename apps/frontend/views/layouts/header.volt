@@ -5,12 +5,10 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		    <title>ADCEO</title>
-		    
-			    {{ stylesheet_link("public/css/bootstrap.css") }}
-			    {{ stylesheet_link("public/css/bootstrap-theme.css") }}
-			    {{ stylesheet_link("public/css/custom.css") }}
-			    {{ stylesheet_link("public/font-awesome/css/font-awesome.min.css") }}
-			    
+			   <link rel="stylesheet" type="text/css" href="public/css/bootstrap.css">
+			    <link rel="stylesheet" type="text/css" href="public/css/bootstrap-theme.css">
+			    <link rel="stylesheet" type="text/css" href="public/css/custom.css">
+			    <link rel="stylesheet" type="text/css" href="public/font-awesome/css/font-awesome.min.css">
 		</head>
 	<body>
 	<header>

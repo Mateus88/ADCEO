@@ -56,9 +56,8 @@
 		 	</div><!-- --/row ---->
 	 	</div><!-- --/container ---->
 </footer>
-
-	{{ javascript_include('js/jquery.js') }}
-	{{ javascript_include('js/bootstrap.js') }}
-	{{ javascript_include('js/custom.js') }}
-	{{ javascript_include('js/filterable.js') }}
-	{{ javascript_include('js/filterable.pack.js') }}
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.j"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/filterable.js"></script>
+<script type="text/javascript" src="js/filterable.pack.js"></script>
