@@ -262,26 +262,8 @@ body
 	max-height: 600px !important;
 }
 
-@media (min-width: 768px) {
- .topcaption{
-		top:75%;
-	}
-}
-@media (min-width: 992px) {
-  .topcaption{
-		top:60%;
-	}
-}
-@media (min-width: 1200px) {
-  .topcaption{
-		top:50%;
-	}
-}
-
-@media (min-width: 1400px) {
-  .topcaption{
-		top:35%;
-	}
+.topcaption{
+	top:35%;
 }
 
 .marginbottom{
@@ -393,14 +375,6 @@ body
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-
-#posts .post:hover {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-
  @media screen and (max-width: 600px) {
 
 #posts .post { width: 50%; }
@@ -518,17 +492,6 @@ footer i:hover {
     text-align: center;
     color: #fff;
 }
-
-
-/* Club
-================================================== */
-.tittlePage{
-	margin-top: 50px !important;
-}
-
-
-/* END Club
-================================================== */
 
 
 
