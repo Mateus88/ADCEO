@@ -16,6 +16,13 @@ $router->add ( "/Adceo/", array (
 		'action' => 'index' 
 ) );
 
+$router->add ( "/Adceo/institucional/clube", array (
+		'module' => 'frontend',
+		'namespace' => 'Adceo\Frontend\Controllers',
+		'controller' => 'institucional',
+		'action' => 'club'
+) );
+
 // Routes Backend
 $router->add ( "/admin", array (
 		'module' => 'backend',
