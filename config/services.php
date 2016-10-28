@@ -20,7 +20,7 @@ $di = new FactoryDefault();
  */
 $di['url'] = function () {
     $url = new UrlResolver();
-    $url->setBaseUri('/Adceo/');
+    $url->setBaseUri('https://adceo.herokuapp.com/adceo/');
 
     return $url;
 };
