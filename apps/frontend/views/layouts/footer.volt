@@ -56,17 +56,9 @@
 		 	</div><!-- --/row ---->
 	 	</div><!-- --/container ---->
 </footer>
-<<<<<<< HEAD
 
 {{ javascript_include("js/jquery.js") }}
 {{ javascript_include("js/bootstrap.js") }}
 {{ javascript_include("js/custom.js") }}
 {{ javascript_include("js/filterable.js") }}
 {{ javascript_include("js/filterable.pack.js") }}
-=======
-{{ javascript_include("js/jquery.js") }}
-{{ javascript_include("js/bootstrap.js") }}
-{{ javascript_include("js/custom.js") }}
-{{ javascript_include("js/filterable.js") }}
-{{ javascript_include("js/filterable.pack.js") }}
->>>>>>> branch 'master' of https://github.com/Mateus88/ADCEO
