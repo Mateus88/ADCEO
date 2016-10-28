@@ -18,12 +18,22 @@ $di = new FactoryDefault();
 /**
  * The URL component is used to generate all kinds of URLs in the application
  */
+
+// Local baseURI
 $di['url'] = function () {
     $url = new UrlResolver();
     $url->setBaseUri('/Adceo/');
 
     return $url;
 };
+
+// Server baseURI
+// $di['url'] = function () {
+// 	$url = new UrlResolver();
+// 	$url->setBaseUri('/');
+
+// 	return $url;
+// };
 
 /**
  * Starts the session the first time some component requests the session service
