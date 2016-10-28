@@ -3,12 +3,9 @@
     "silex/silex": "^1.3",
     "monolog/monolog": "^1.4",
     "twig/twig": "^1.8",
-<<<<<<< HEAD
     "symfony/twig-bridge": "^2"
-=======
     "symfony/twig-bridge": "^2",
     "ext-phalcon": ">=1.3.0"
->>>>>>> branch 'master' of https://github.com/Mateus88/ADCEO
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
