@@ -5,12 +5,19 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		    <title>ADCEO</title>
+<<<<<<< HEAD
 		    
 			    {{ stylesheet_link("public/css/bootstrap.css") }}
 			    {{ stylesheet_link("public/css/bootstrap-theme.css") }}
 			    {{ stylesheet_link("public/css/custom.css") }}
 			    {{ stylesheet_link("public/font-awesome/css/font-awesome.min.css") }}
 			    
+=======
+			   {{ stylesheet_link("public/css/bootstrap.css") }}
+			   {{ stylesheet_link("public/css/bootstrap-theme.css") }}
+			   {{ stylesheet_link("public/css/custom.css") }}
+			   {{ stylesheet_link("public/font-awesome/css/font-awesome.min.css") }}
+>>>>>>> branch 'master' of https://github.com/Mateus88/ADCEO
 		</head>
 	<body>
 	<header>
@@ -164,4 +171,8 @@
 			</a>
 		</div>
 	  {%endif%}
+<<<<<<< HEAD
 </header>
+=======
+</header>
+>>>>>>> branch 'master' of https://github.com/Mateus88/ADCEO

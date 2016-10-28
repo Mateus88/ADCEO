@@ -22,7 +22,7 @@ $di = new FactoryDefault();
 // Local baseURI
 $di['url'] = function () {
     $url = new UrlResolver();
-    $url->setBaseUri('/Adceo/');
+    $url->setBaseUri('/');
 
     return $url;
 };

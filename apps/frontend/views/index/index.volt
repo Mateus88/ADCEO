@@ -15,6 +15,7 @@
 		<div class="row">
 			<div id="posts">
 				<div class="post">
+<<<<<<< HEAD
 					<img src="public/img/slider1.jpg" />
 					<div class="post-content">
 						<h2>Title 1</h2>
@@ -61,6 +62,54 @@
 				</div>
 				<div class="post">
 					<img src="public/img/slider1.jpg" />
+=======
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 1</h2>
+						<p>Description 1 click aqui para ver mais </p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 2</h2>
+						<p>Description 2</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 3</h2>
+						<p>Description 3</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div id="posts">
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 4</h2>
+						<p>Description 4</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 5</h2>
+						<p>Description 5</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post">
+					<img src="public/img/slider2.jpg" />
+>>>>>>> branch 'master' of https://github.com/Mateus88/ADCEO
 					<div class="post-content">
 						<h2>Title 6</h2>
 						<p>Description 6</p>
@@ -91,6 +140,7 @@
 		<div class="row">
 			<div id="posts">
 				<div class="post ">
+<<<<<<< HEAD
 					<img src="public/img/vs.jpg" />
 					<div class="post-content">
 						<h1>29 Out 2016</h1>
@@ -140,6 +190,57 @@
 						<h1>29 Out 2016</h1>
                           <h2>FUTEBOL</h2>
                           <p>5ª Jornada - Torneio CIF</p>
+=======
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 1</h2>
+						<p>Description 1</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 2</h2>
+						<p>Description 2</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 3</h2>
+						<p>Description 3</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="posts">
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 4</h2>
+						<p>Description 4</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 5</h2>
+						<p>Description 5</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 6</h2>
+						<p>Description 6</p>
+						<a href="#">View more</a>
+>>>>>>> branch 'master' of https://github.com/Mateus88/ADCEO
 					</div>
 				</div>
 			</div>
