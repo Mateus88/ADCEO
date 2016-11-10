@@ -20,20 +20,20 @@ $di = new FactoryDefault();
  */
 
 // Local baseURI
-$di['url'] = function () {
-    $url = new UrlResolver();
-    $url->setBaseUri('/ADCEO/');
+// $di['url'] = function () {
+//     $url = new UrlResolver();
+//     $url->setBaseUri('/ADCEO/');
 
-    return $url;
-};
+//     return $url;
+// };
 
 // Server baseURI
-// $di['url'] = function () {
-// 	$url = new UrlResolver();
-// 	$url->setBaseUri('/');
+$di['url'] = function () {
+	$url = new UrlResolver();
+	$url->setBaseUri('/');
 
-// 	return $url;
-// };
+	return $url;
+};
 
 /**
  * Starts the session the first time some component requests the session service
