@@ -1,20 +1,20 @@
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <!-- Begin Header -->
 <!DOCTYPE HTML>
 	<html>
 		<head>
-		    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="utf-8"/>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		    <title>ADCEO</title>
-		    
-			    <?= $this->tag->stylesheetLink('public/css/bootstrap.css') ?>
-			    <?= $this->tag->stylesheetLink('public/css/bootstrap-theme.css') ?>
-			    <?= $this->tag->stylesheetLink('public/css/custom.css') ?>
-			    <?= $this->tag->stylesheetLink('public/font-awesome/css/font-awesome.min.css') ?>
-		
+			   <?= $this->tag->stylesheetLink('public/css/bootstrap.css') ?>
+			   <?= $this->tag->stylesheetLink('public/css/bootstrap-theme.css') ?>
+			   <?= $this->tag->stylesheetLink('public/css/custom.css') ?>
+			   <?= $this->tag->stylesheetLink('public/font-awesome/css/font-awesome.min.css') ?>
+			   <?= $this->tag->stylesheetLink('public/css/timelify.css') ?>
 		</head>
 	<body>
-		<header>
+	<header>
 			<nav class="navbar navbar-default navbar-fixed-top">
 		      <div class="container">
 		        <div class="navbar-header">
@@ -24,160 +24,549 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		          </button>
-		          <a class="navbar-brand" href="#">ADCEO</a>
+		          <a class="navbar-brand" href="<?= $this->url->get('index') ?>">ADCEO</a>
 		        </div>
 		        <div id="navbar" class="navbar-collapse collapse">
 		          <ul class="nav navbar-nav">
-		            <li class="active"><a href="#">Home</a></li>
-		            <li><a href="#about">About</a></li>
-		            <li><a href="#contact">Contact</a></li>
 		            <li class="dropdown">
-		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Institucional <span class="caret"></span></a>
 		              <ul class="dropdown-menu">
-		                <li><a href="#">Action</a></li>
-		                <li><a href="#">Another action</a></li>
-		                <li><a href="#">Something else here</a></li>
-		                <li role="separator" class="divider"></li>
-		                <li class="dropdown-header">Nav header</li>
-		                <li><a href="#">Separated link</a></li>
-		                <li><a href="#">One more separated link</a></li>
+		                <li><a href="<?= $this->url->get('institucional/club') ?>">Clube</a></li>
+		                <li><a href="#">Missão</a></li>
+		                <li><a href="<?= $this->url->get('institucional/statutes') ?>">Estatutos</a></li>
+		                <li><a href="<?= $this->url->get('institucional/socials') ?>">Orgãos sociais</a></li>
+		                <li><a href="#">Contactos</a></li>
+		                <li><a href="#">Horários</a></li>
+		                <li><a href="#">Prémios e distinções</a></li>
 		              </ul>
 		            </li>
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agenda <span class="caret"></span></a>
+		              <ul class="dropdown-menu">
+		                <li><a href="#">Calendário</a></li>
+		                <li><a href="#">Jogos</a></li>
+		              </ul>
+		            </li>
+		            <li><a href="#contact">Área de Sócio</a></li>
+		            <li><a href="#contact">Notícias</a></li>
+		            <li><a href="#contact">E-escola</a></li>
+		            <li><a href="#contact">Loja</a></li>
+		            <li><a href="#contact">Campo de férias</a></li>
+		            <li><a href="#contact">Festas de aniversário</a></li>
+		            <li><a href="#contact">Patrocinadores</a></li>
 		          </ul>
-		        </div><!--/.nav-collapse -->
+		          <?php if (!empty($user)) { ?> 
+		           <ul class="nav navbar-nav navbar-right">
+			        <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $user->User ?> <span class="caret"></span></a>
+		              <ul class="dropdown-menu">
+		                <li><a href="<?= $this->url->get('institucional/club') ?>">Perfil</a></li>
+		                <?php if ($user->Type == 3) { ?>
+		                	<li><a href="#" onclick="fbLogoutUser()">Terminar sessão</a></li>
+		                <?php } else { ?>
+		                	 <li><a href="<?= $this->url->get('login/logout') ?>">Terminar sessão</a></li>
+		               <?php } ?>
+		              </ul>
+		            </li>
+			      </ul>
+			      <!--Login without success -->
+			      <?php } else { ?>
+			      <ul class="nav navbar-nav navbar-right">
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+						<ul id="login-dp" class="dropdown-menu">
+							<li>
+								 <div class="row">
+										<div class="col-md-12">
+											<p class="text-center">Login via</p>
+											<div class="social-buttons text-center ">
+											<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
+											</div>
+			                                <p class="text-center"> ou </p>
+			                                <?= $this->tag->form(['login/start', 'method' => 'post', 'id' => 'login-nav', 'class' => 'form', 'accept-charset' => 'UTF-8', 'role' => 'form']) ?>
+													<div class="form-group">
+														 <label class="sr-only" for="exampleInputEmail2">Email</label>
+														 <input type="email" name="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+													</div>
+													<div class="form-group">
+														 <label class="sr-only" for="exampleInputPassword2">Password</label>
+														 <input type="password" name="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+			                                             <div class="help-block text-right"><a href="">Esqueceu a password ?</a></div>
+													</div>
+													<div class="form-group">
+														 <button type="submit" class="btn btn-primary btn-block">Login</button>
+													</div>
+													<div class="checkbox text-center">
+														 <label>
+														 <input type="checkbox"> Guardar login
+														 </label>
+													</div>
+											 <?= $this->tag->endForm() ?>
+										</div>
+										<div class="bottom text-center">
+										 	<a type="button" class="corpButton" data-toggle="modal" data-target="#loginModal"><b>Registe-se</b></a>
+										</div>
+								 </div>
+							</li>
+						</ul>
+			        </li>
+			      </ul>
+			      <?php } ?>
+		        </div>
 		      </div>
     		</nav>
-    		<div id="myCarousel" class="carousel slide" data-ride="carousel"> 
-			  <!-- Indicators -->
-			  
-			  <ol class="carousel-indicators">
-			    <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-			    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-			    <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-			  </ol>
-			  <div class="carousel-inner">
-			    <div class="item"> <img src="http://lorempixel.com/1200/400/sports" style="width:100%" alt="First slide">
-			      <div class="container">
-			        <div class="carousel-caption">
-			          <h1>Slide 1</h1>
-			          <p>Aenean a rutrum nulla. Vestibulum a arcu at nisi tristique pretium.</p>
-			          <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-			        </div>
-			      </div>
-			    </div>
-			    <div class="item"> <img src="http://lorempixel.com/1200/400/people" style="width:100%" data-src="" alt="Second    slide">
-			      <div class="container">
-			        <div class="carousel-caption">
-			          <h1>Slide 2</h1>
-			          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae egestas purus. </p>
-			          <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-			        </div>
-			      </div>
-			    </div>
-			    <div class="item active"> <img src="http://lorempixel.com/1200/400/abstract" style="width:100%" data-src="" alt="Third slide">
-			      <div class="container">
-			        <div class="carousel-caption">
-			          <h1>Slide 3</h1>
-			          <p>Donec sit amet mi imperdiet mauris viverra accumsan ut at libero.</p>
-			          <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-			        </div>
-			      </div>
-			    </div>
-			  </div>
-			  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> 
-			  <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> 
-			 </div>
+        <?php if ($page == 'Home') { ?>
+	    	<div id="myCarousel" class="carousel slide maxheight"
+				data-ride="carousel">
+				Indicators
 		
-		</header>
+			<ol class="carousel-indicators marginbottom">
+				<li data-target="#myCarousel" data-slide-to="0" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+			</ol>
+			<div class="carousel-inner maxheight">
+			 <?php $this->flash->output() ?>
+				<div class="item">
+					<img src="public/img/slider1.jpg" style="width: 100%"
+						alt="First slide">
+					<div class="container">
+						<div class="carousel-caption topcaption">
+							<h1>Slide 1</h1>
+							<p>Aenean a rutrum nulla. Vestibulum a arcu at nisi tristique
+								pretium.</p>
+							<p>
+								<a class="btn btn-md btn-primary btn-responsive" href="#"
+									role="button">Sign up today</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="public/img/slider2.jpg" style="width: 100%" data-src=""
+						alt="Second    slide">
+					<div class="container">
+						<div class="carousel-caption topcaption">
+							<h1>Slide 2</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+								vitae egestas purus.</p>
+							<p>
+								<a class="btn btn-md btn-primary btn-responsive" href="#"
+									role="button">Learn more</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item active">
+					<img src="public/img/slider2.jpg" style="width: 100%" data-src=""
+						alt="Third slide">
+					<div class="container">
+						<div class="carousel-caption topcaption ">
+							<h1>Slide 3</h1>
+							<p>Donec sit amet mi imperdiet mauris viverra accumsan ut at
+								libero.</p>
+							<p>
+								<a class="btn btn-md btn-primary btn-responsive" href="#"
+									role="button">Browse gallery</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a> 
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+	  <?php } ?>
+</header>
 <!-- End Header -->
-<div class="container-fluid" style="margin-top:50px;min-height:500px;">
+<div class="container marginContainer ">
 
-	<div class="heading-block text-center margin-bottom-40 margin-top-50 animate fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-        <h3>Notícias</h3>
-      </div>
+	<!--  BEGIN section news -->
+	<section>
+		<div
+			class="heading-block text-center margin-bottom-40 margin-top-50 animate fadeInUp"
+			data-wow-delay="0.2s"
+			style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+			<h3>Notícias</h3>
+		</div>
+		<div class="row">
+			<div id="posts">
+				<div class="post">
+					<img src="public/img/slider1.jpg" />
+					<div class="post-content">
+						<h2>Title 1</h2>
+						<p>Description 1 click aqui para ver mais </p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 2</h2>
+						<p>Description 2</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider3.jpg" />
+					<div class="post-content">
+						<h2>Title 3</h2>
+						<p>Description 3</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="posts">
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 4</h2>
+						<p>Description 4</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 5</h2>
+						<p>Description 5</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 6</h2>
+						<p>Description 6</p>
+						<a class="preview" href="images/portfolio/full/item1.png"><i class="fa fa-eye"></i> View</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="text-center">
+					<a href="#" class="btn btn-info " >Ver mais</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--  END section news -->
+	<div
+		class="heading-block text-center margin-bottom-40 margin-top-50 animate fadeInUp"
+		data-wow-delay="0.2s"
+		style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+		<h3>Próximas atividades</h3>
+	</div>
 
-	<ul class="row">
-        <li class="col-md-3 animate fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
-          <div class="intro-in"> <img class="img-responsive" src="http://lorempixel.com/1200/400/sports" alt=""> <a href="animation-version/index.html" class="intro-hover" target="_blank"> VIEW DEMO </a>
-            <h5>DEMO 1</h5>
-          </div>
-        </li>
-        <li class="col-md-3 animate fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
-          <div class="intro-in"> <img class="img-responsive" src="http://lorempixel.com/1200/400/sports" alt=""> <a href="animation-version/main_coporate_1.html" class="intro-hover" target="_blank"> VIEW DEMO </a>
-            <h5>DEMO COPORATE</h5>
-          </div>
-        </li>
-        <li class="col-md-3 animate fadeIn" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;">
-          <div class="intro-in"> <img class="img-responsive" src="http://lorempixel.com/1200/400/sports" alt=""> <a href="animation-version/main_creative_2.html" class="intro-hover" target="_blank"> VIEW DEMO </a>
-            <h5>DEMO CREATIVE 2</h5>
-          </div>
-        </li>
-        <li class="col-md-3 animate fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
-          <div class="intro-in"> <img class="img-responsive" src="http://lorempixel.com/1200/400/sports" alt=""> <a href="animation-version/main_creative_3.html" class="intro-hover" target="_blank"> VIEW DEMO </a>
-            <h5>DEMO CREATIVE 3</h5>
-          </div>
-        </li>
-        <li class="col-md-3 animate fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
-          <div class="intro-in"> <img class="img-responsive" src="http://lorempixel.com/1200/400/sports" alt=""> <a href="animation-version/main_creative_4.html" class="intro-hover" target="_blank"> VIEW DEMO </a>
-            <h5>DEMO CREATIVE 4</h5>
-          </div>
-        </li>
-        <li class="col-md-3 animate fadeIn" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;">
-          <div class="intro-in"> <img class="img-responsive" src="http://lorempixel.com/1200/400/sports" alt=""> <a href="animation-version/main_creative_5.html" class="intro-hover" target="_blank"> VIEW DEMO </a>
-            <h5>DEMO CREATIVE 5</h5>
-          </div>
-        </li>
-      </ul>
+	<!--  BEGIN section agenda -->
+	<section>
+		<div class="row">
+			<div id="posts">
+				<div class="post ">
+					<img src="public/img/vs.jpg" />
+					<div class="post-content">
+						<h1>29 Out 2016</h1>
+                          <h2>FUTEBOL</h2>
+                          <p>5ª Jornada - Torneio CIF</p>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/vs.jpg" />
+					<div class="post-content">
+						<h1>29 Out 2016</h1>
+                          <h2>FUTEBOL</h2>
+                          <p>5ª Jornada - Torneio CIF</p>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/vs.jpg" />
+					<div class="post-content">
+						<h1>29 Out 2016</h1>
+                          <h2>FUTEBOL</h2>
+                          <p>5ª Jornada - Torneio CIF</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="posts">
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 4</h2>
+						<p>Description 4</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 5</h2>
+						<p>Description 5</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post ">
+					<img src="public/img/slider2.jpg" />
+					<div class="post-content">
+						<h2>Title 6</h2>
+						<p>Description 6</p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--  END section agenda -->
 </div>
 <!-- Begin Footer -->
-<footer id="footerWrapper">
-				<section id="mainFooter">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="footerWidget">
-									<img src="images/neko-logo.png" alt="latest Little Neko news" id="footerLogo">
-									<p><a href="http://www.little-neko.com" title="Little Neko, website template creation">Little Neko</a> is a web design and development studio. We build responsive HTML5 and CSS3 templates, integrating best web design practices and up-to-date web technologies to create great user experiences. We love what we do and we hope you do too! </p>
-								</div>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<?php if ($page == 'Home') { ?>
+<!-- Begin section patterns -->
+<section class="pattern">
+	<div id="cwrap">
+		 <div class="container">
+		 	<div class="row centered">
+			 	<h3>Patrocinadores</h3>
+			 	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+			 	<div class="col-lg-3 col-md-3 col-sm-3">
+			 		<img src="public/img/pattern1.png" class="img-responsive">
+			 	</div>
+			 	<div class="col-lg-3 col-md-3 col-sm-3">
+			 		<img src="public/img/pattern1.png" class="img-responsive">
+			 	</div>
+			 	<div class="col-lg-3 col-md-3 col-sm-3">
+			 		<img src="public/img/pattern1.png" class="img-responsive">
+			 	</div>
+			 	<div class="col-lg-3 col-md-3 col-sm-3">
+			 		<img src="public/img/pattern1.png" class="img-responsive">
+			 	</div>
+		 	</div><!-- --/row ---->
+		 </div><!-- --/container ---->
+	 </div>
+</section>
+<?php } ?>
+<!-- End section patterns -->
+<footer>
+	 	<div class="container">
+		 	<div class="row">
+		 		<div class="col-lg-4">
+		 			<h4>Sobre nós</h4>
+		 			<div class="hline-w"></div>
+		 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+		 		</div>
+		 		<div class="col-lg-4">
+		 			<h4>Redes sociais</h4>
+		 			<div class="hline-w"></div>
+		 			<p>
+		 				<a href="#"><i class="fa fa-facebook"></i></a>
+		 				<a href="#"><i class="fa fa-google-plus-square"></i></a>
+		 				<a href="#"><i class="fa fa-twitter"></i></a>
+		 			</p>
+		 		</div>
+		 		<div class="col-lg-4">
+		 			<h4>Morada</h4>
+		 			<div class="hline-w"></div>
+		 			<p>
+		 				Some Ave, 987,<br>
+		 				23890, New York,<br>
+		 				United States.<br>
+		 			</p>
+		 		</div>
+		 		<div class="col-md-12 centered paddingtop " >
+		 			<p>© 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.</p>
+		 		</div>
+		 	
+		 	</div><!-- --/row ---->
+	 	</div><!-- --/container ---->
+</footer>
+<!-- modal register -->
+<div class="modal fade" id="loginModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Registo do utilizador</h4>
+      </div>
+      <div class="modal-body">
+        <?= $this->tag->form(['method' => 'post', 'login/register', 'id' => 'disablefbForm', 'class' => 'horizontal-form']) ?>       
+						<div class="form-body">
+							<div class="form-group">
+								<label class="control-label">Username</label> 
+								<input name="username" type="text" class="form-control" 
+								required style="background: #fff; border-color: #fff; color: #1c1c1c;" />
 							</div>
-							<div class="col-sm-3">
-								<div class="footerWidget">
-
-									<h3>Little NEKO</h3>
-									<address>
-										<p> <i class="fa fa-map-marker"></i>&nbsp;77 Mass. Ave., E14/E15<br>
-											Seattle, MA 02139-4307 USA <br>
-											<i class="fa-phone"></i>&nbsp;615.987.1234 <br>
-											<i class="fa fa-envelope-o"></i>&nbsp;<a href="mailto:little@little-neko.com">little@little-neko.com</a> </p>
-										</address>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="footerWidget">
-										<h3>Follow us, we are social</h3>
-										<ul class="socialNetwork">
-											<li><a href="#" class="tips" title="" data-original-title="follow me on Facebook"><i class="fa fa-facebook iconRounded"></i></a></li>
-											<li><a href="#" class="tips" title="" data-original-title="follow me on Twitter"><i class="fa fa-twitter iconRounded"></i></a></li>
-											<li><a href="#" class="tips" title="" data-original-title="follow me on Google+"><i class="fa fa-google-plus-square iconRounded"></i></a></li>
-										</ul>     
-									</div>
-								</div>
+							<div class="form-group">
+								<label class="control-label">Email</label> 
+								<input	name="email" type="text" class="form-control"
+								required style="background: #fff; border-color: #fff; color: #1c1c1c;" />
 							</div>
-						</div>
-					</section>
-					<section id="footerRights">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-12">
-									<p>Copyright � 2014 <a href="http://www.little-neko.com" target="blank">Little NEKO</a> / All rights reserved.</p>
-								</div>
-
+							<div class="form-group">
+								<label class="control-label">Password</label> 
+								<input name="password" type="password" class="form-control" 
+								required style="background: #fff; border-color: #fff; color: #1c1c1c;" />
 							</div>
-						</div>
-					</section>
-				</footer>
+							<div class="form-group">
+								<label class="control-label">Repetir password</label> 
+								<input name="repeat_password" type="password" class="form-control"
+								required style="background: #fff; border-color: #fff; color: #1c1c1c;" />
+							</div>
+							<div class="margin-top-10">
+								<input type="submit" class="btn" name="register" value="Registar" style="background-color: #384452;color:#ffffff;" />
+								<button type="reset" class="btn default">Cancelar</button>
+							</div>
+							<input type="hidden" name="<?php echo $this->security->getTokenKey() ?>"
+        					value="<?php echo $this->security->getToken() ?>"/>
+						</div>	
+		<?= $this->tag->endForm() ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
 
-	<?= $this->tag->javascriptInclude('js/jquery.js') ?>
-	<?= $this->tag->javascriptInclude('js/bootstrap.js') ?>
-	<?= $this->tag->javascriptInclude('js/custom.js') ?>
+<?= $this->tag->javascriptInclude('js/jquery.js') ?>
+<?= $this->tag->javascriptInclude('js/bootstrap.js') ?>
+<?= $this->tag->javascriptInclude('js/custom.js') ?>
+<?= $this->tag->javascriptInclude('js/filterable.js') ?>
+<?= $this->tag->javascriptInclude('js/filterable.pack.js') ?>
+<?= $this->tag->javascriptInclude('js/jquery.timelify.js') ?>
+<script>
+    //Flash messages
+	$(".alert").slideUp(8000, function() {
+	    $(this).remove();
+	});
+	
+	
+	//Timeline plugin
+	$('.timeline').timelify();
+	
+	$('.timeline').timelify({
+
+		  // animation types
+		  animLeft: "bounceInLeft",
+		  animRight: "bounceInRight",
+		  animCenter: "bounceInUp",
+
+		  // animation speed
+		  animSpeed: 300,
+
+		  // trigger position in pixels
+		  offset: 150
+		  
+		});
+	
+		 //Facebook login
+				  
+		// This is called with the results from from FB.getLoginStatus().
+		  function statusChangeCallback(response) {
+		    console.log('statusChangeCallback');
+		    console.log(response);
+		    // The response object is returned with a status field that lets the
+		    // app know the current login status of the person.
+		    // Full docs on the response object can be found in the documentation
+		    // for FB.getLoginStatus().
+		    if (response.status === 'connected') {
+		      // Logged into your app and Facebook.
+		      testAPI();
+		    } else if (response.status === 'not_authorized') {
+		      // The person is logged into Facebook, but not your app.
+		     console.log('Please log into this app.');
+		    } else {
+		      // The person is not logged into Facebook, so we're not sure if
+		      // they are logged into this app or not.
+		      console.log('Please log into Facebook.');
+		    }
+		  }
+		
+		  // This function is called when someone finishes with the Login
+		  // Button.  See the onlogin handler attached to it in the sample
+		  // code below.
+		  function checkLoginState() {
+		    FB.getLoginStatus(function(response) {
+		      statusChangeCallback(response);
+		    });
+		  }
+		
+		  window.fbAsyncInit = function() {
+			  FB.init({
+			    appId      : '327831930929515',
+			    xfbml      : true,
+			    version    : 'v2.3',
+			    status     : true,
+			    cookie     : true
+			  });
+			  
+			  // Now that we've initialized the JavaScript SDK, we call 
+			  // FB.getLoginStatus().  This function gets the state of the
+			  // person visiting this page and can return one of three states to
+			  // the callback you provide.  They can be:
+			  //
+			  // 1. Logged into your app ('connected')
+			  // 2. Logged into Facebook, but not your app ('not_authorized')
+			  // 3. Not logged into Facebook and can't tell if they are logged into
+			  //    your app or not.
+			  //
+			  // These three cases are handled in the callback function.
+			
+			  FB.getLoginStatus(function(response) {
+			    statusChangeCallback(response);
+			  });
+		
+		  };
+		
+		  // Load the SDK asynchronously
+		  (function(d, s, id) {
+		    var js, fjs = d.getElementsByTagName(s)[0];
+		    if (d.getElementById(id)) return;
+		    js = d.createElement(s); js.id = id;
+		    js.src = "//connect.facebook.net/pt_PT/sdk.js";
+		    fjs.parentNode.insertBefore(js, fjs);
+		  }(document, 'script', 'facebook-jssdk'));
+		
+		  // Here we run a very simple test of the Graph API after login is
+		  // successful.  See statusChangeCallback() for when this call is made.
+		  function testAPI() {
+		    FB.api('/me',{"fields":"id,name,email,first_name,last_name"}, function(response) {
+		    	
+	                 var name = response.name;
+	                 var email = response.email;
+	                 var id= response.id;
+
+		    	jQuery.ajax({
+						type: 'POST',
+					    url: "<?= $this->url->get('login/faceLogin') ?>",
+					    data: {name:name,email:email,id:id},
+					    success: function(result) {
+// 					    	window.location="<?= $this->url->get('login/logout') ?>";
+					    }
+					});
+		    });
+		  }
+		  
+		  function fbLogoutUser() {
+			    FB.getLoginStatus(function(response) {
+			        if (response && response.status === 'connected') {
+			            FB.logout(function(response) {
+			            	jQuery.ajax({
+								type: 'POST',
+							    url: "<?= $this->url->get('login/logout') ?>",
+							    success: function(result) {
+	 					    		window.location.href = "<?= $this->url->get('login/logout') ?>";
+							    }
+							});
+			            });
+			        }
+			    });
+			}
+
+</script>
+
 <!-- End Footer -->

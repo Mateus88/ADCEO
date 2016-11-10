@@ -23,6 +23,20 @@ $router->add ( "/Adceo/institucional/clube", array (
 		'action' => 'club'
 ) );
 
+$router->add ( "/Adceo/institucional/estatutos", array (
+		'module' => 'frontend',
+		'namespace' => 'Adceo\Frontend\Controllers',
+		'controller' => 'institucional',
+		'action' => 'statutes'
+) );
+
+$router->add ( "/Adceo/institucional/sociais", array (
+		'module' => 'frontend',
+		'namespace' => 'Adceo\Frontend\Controllers',
+		'controller' => 'institucional',
+		'action' => 'socials'
+) );
+
 // Routes Backend
 $router->add ( "/admin", array (
 		'module' => 'backend',
@@ -36,6 +50,34 @@ $router->add ( "/admin/", array (
 		'namespace' => 'Adceo\Backend\Controllers',
 		'controller' => 'index',
 		'action' => 'index'
+) );
+
+$router->add ( "/admin/login", array (
+		'module' => 'backend',
+		'namespace' => 'Adceo\Backend\Controllers',
+		'controller' => 'auth',
+		'action' => 'index'
+) );
+
+$router->add ( "/admin/logout", array (
+		'module' => 'backend',
+		'namespace' => 'Adceo\Backend\Controllers',
+		'controller' => 'auth',
+		'action' => 'logout'
+) );
+
+$router->add ( "/admin/auth/start", array (
+		'module' => 'backend',
+		'namespace' => 'Adceo\Backend\Controllers',
+		'controller' => 'auth',
+		'action' => 'start'
+) );
+
+$router->add ( "/admin/institucional/club", array (
+		'module' => 'backend',
+		'namespace' => 'Adceo\Backend\Controllers',
+		'controller' => 'institucional',
+		'action' => 'club'
 ) );
 
 

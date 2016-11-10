@@ -2,7 +2,7 @@
 <!-- Begin Header -->
 {%include "layouts/header.volt" %}
 <!-- End Header -->
-<div class="container  ">
+<div class="container marginContainer ">
 
 	<!--  BEGIN section news -->
 	<section>

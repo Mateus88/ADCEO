@@ -9,6 +9,7 @@
 			   {{ stylesheet_link("public/css/bootstrap-theme.css") }}
 			   {{ stylesheet_link("public/css/custom.css") }}
 			   {{ stylesheet_link("public/font-awesome/css/font-awesome.min.css") }}
+			   {{ stylesheet_link("public/css/timelify.css") }}
 		</head>
 	<body>
 	<header>
@@ -30,8 +31,8 @@
 		              <ul class="dropdown-menu">
 		                <li><a href="{{url('institucional/club')}}">Clube</a></li>
 		                <li><a href="#">Missão</a></li>
-		                <li><a href="#">Estatutos</a></li>
-		                <li><a href="#">Orgãos sociais</a></li>
+		                <li><a href="{{url('institucional/statutes')}}">Estatutos</a></li>
+		                <li><a href="{{url('institucional/socials')}}">Orgãos sociais</a></li>
 		                <li><a href="#">Contactos</a></li>
 		                <li><a href="#">Horários</a></li>
 		                <li><a href="#">Prémios e distinções</a></li>
@@ -52,51 +53,66 @@
 		            <li><a href="#contact">Festas de aniversário</a></li>
 		            <li><a href="#contact">Patrocinadores</a></li>
 		          </ul>
+		          {%if user is not empty %} 
 		           <ul class="nav navbar-nav navbar-right">
+			        <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{user.User}} <span class="caret"></span></a>
+		              <ul class="dropdown-menu">
+		                <li><a href="{{url('institucional/club')}}">Perfil</a></li>
+		                {%if user.Type == 3 %}
+		                	<li><a href="#" onclick="fbLogoutUser()">Terminar sessão</a></li>
+		                {%else%}
+		                	 <li><a href="{{ url('login/logout') }}">Terminar sessão</a></li>
+		               {%endif%}
+		              </ul>
+		            </li>
+			      </ul>
+			      <!--Login without success -->
+			      {%else%}
+			      <ul class="nav navbar-nav navbar-right">
 			        <li class="dropdown">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
 						<ul id="login-dp" class="dropdown-menu">
 							<li>
 								 <div class="row">
 										<div class="col-md-12">
-											Login via
-											<div class="social-buttons">
-												<a href="#" class="btn btn-fb btn-responsive"><i class="fa fa-facebook"></i> Facebook</a>
-												<a href="#" class="btn btn-tw btn-responsive"><i class="fa fa-google-plus-square"></i> Google +</a>
+											<p class="text-center">Login via</p>
+											<div class="social-buttons text-center ">
+											<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
 											</div>
-			                                ou
-											 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+			                                <p class="text-center"> ou </p>
+			                                {{ form('login/start', 'method': 'post', 'id': 'login-nav','class':'form','accept-charset':'UTF-8','role':'form') }}
 													<div class="form-group">
 														 <label class="sr-only" for="exampleInputEmail2">Email</label>
-														 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+														 <input type="email" name="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
 													</div>
 													<div class="form-group">
 														 <label class="sr-only" for="exampleInputPassword2">Password</label>
-														 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+														 <input type="password" name="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
 			                                             <div class="help-block text-right"><a href="">Esqueceu a password ?</a></div>
 													</div>
 													<div class="form-group">
 														 <button type="submit" class="btn btn-primary btn-block">Login</button>
 													</div>
-													<div class="checkbox">
+													<div class="checkbox text-center">
 														 <label>
 														 <input type="checkbox"> Guardar login
 														 </label>
 													</div>
-											 </form>
+											 {{ end_form() }}
 										</div>
 										<div class="bottom text-center">
-										 	<a href="#"><b>Registe-se</b></a>
+										 	<a type="button" class="corpButton" data-toggle="modal" data-target="#loginModal"><b>Registe-se</b></a>
 										</div>
 								 </div>
 							</li>
 						</ul>
 			        </li>
 			      </ul>
+			      {%endif%}
 		        </div>
 		      </div>
     		</nav>
-    		
         {%if page =="Home"%}
 	    	<div id="myCarousel" class="carousel slide maxheight"
 				data-ride="carousel">
@@ -108,6 +124,7 @@
 				<li data-target="#myCarousel" data-slide-to="2" class="active"></li>
 			</ol>
 			<div class="carousel-inner maxheight">
+			 <?php $this->flash->output() ?>
 				<div class="item">
 					<img src="public/img/slider1.jpg" style="width: 100%"
 						alt="First slide">

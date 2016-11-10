@@ -20,8 +20,13 @@ body
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-/*   padding-top: 15px; */
+  min-height: 70%;
 }
+
+.marginContainer{
+	margin-bottom: 3%;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -43,6 +48,10 @@ body
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
+}
+
+.tittlePage{
+	margin-top: 8% !important;
 }
 
 /* ul.socialNetwork {padding:0; display: block; margin-bottom: 0;} */
@@ -252,6 +261,85 @@ body
         border-top:0 none;
     }
 }
+
+.alert {
+  padding: 15px;
+  margin-bottom: 0px;
+  margin-top:35px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: center;
+}
+.alert h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.alert .alert-link {
+  font-weight: bold;
+}
+.alert > p,
+.alert > ul {
+  margin-bottom: 0;
+}
+.alert > p + p {
+  margin-top: 5px;
+}
+.alert-dismissable,
+.alert-dismissible {
+  padding-right: 35px;
+}
+.alert-dismissable .close,
+.alert-dismissible .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  color: inherit;
+}
+.alert-success {
+  background-color: #8bbf61;
+  border-color: #8bbf61;
+  color: #ffffff;
+}
+.alert-success hr {
+  border-top-color: #7eb84f;
+}
+.alert-success .alert-link {
+  color: #e6e6e6;
+}
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+.alert-info hr {
+  border-top-color: #a6e1ec;
+}
+.alert-info .alert-link {
+  color: #245269;
+}
+.alert-warning {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+  color: #ffffff;
+}
+.alert-warning hr {
+  border-top-color: #eea236;
+}
+.alert-warning .alert-link {
+  color: #e6e6e6;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.alert-danger hr {
+  border-top-color: #a9302a;
+}
+.alert-danger .alert-link {
+  color: #e6e6e6;
+}
+
 /* END NAVBAR
 ================================================== */
 
@@ -522,10 +610,18 @@ footer i:hover {
 
 /* Club
 ================================================== */
-.tittlePage{
-	margin-top: 50px !important;
-}
 
+
+/* END Club
+================================================== */
+
+/* Social entities
+================================================== */
+.info{
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
 
 /* END Club
 ================================================== */
