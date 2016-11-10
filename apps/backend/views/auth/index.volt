@@ -18,7 +18,7 @@
         
     </head>
 <body class="hold-transition login-page">
- <?php $this->flash->output() ?>
+ <?php $this->flash->output()?>
 <div class="login-box">
   <div class="login-logo">
     <a href="#"><b>ADCEO</b></a>
