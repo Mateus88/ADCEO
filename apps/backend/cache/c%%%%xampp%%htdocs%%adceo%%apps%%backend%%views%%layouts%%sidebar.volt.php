@@ -6,7 +6,7 @@
 				<li class="header">FUNCIONALIDADES </li>
 				<li class="treeview">
 					<a href="#"> 
-						<i class="fa fa-dashboard"></i> 
+						<i class="fa fa-university"></i> 
 						<span>Institucional</span> 
 						<span class="pull-right-container"> 
 							<i class="fa fa-angle-left pull-right"></i>

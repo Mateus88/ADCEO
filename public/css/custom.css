@@ -368,12 +368,17 @@ body
 
 @media (min-width: 1400px) {
   .topcaption{
-		top:35%;
+		top:30%;
 	}
 }
 
 .marginbottom{
 	bottom: 0px !important;
+}
+
+.slideInfo{
+	font-size: 30px;
+	font-weight: 600;
 }
 
 
@@ -527,7 +532,8 @@ body
 .lead {
     font-size: 16px;
     line-height: 24px;
-    font-weight: 400;
+    font-weight: 600;
+    color: #000000;
 }
 
 
@@ -623,9 +629,25 @@ footer i:hover {
 	margin-top: 20px;
 }
 
-/* END Club
+/* END Social entities
 ================================================== */
 
+/* Backend All css
+================================================== */
+.background {
+    background-image: url(/ADCEO/img/localiz.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    
+}
 
+.btnmargins{
+	margin:20px 20px 20px 0px;
+}
 
+.marginIcon{
+	margin:0px 0px 0px 10px;
+}
 
+/* END Backend All css
+================================================== */

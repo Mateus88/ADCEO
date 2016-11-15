@@ -4,6 +4,8 @@
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
         <title>ADCEO - Backend</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <!-- Custom CSS -->
+        <?= $this->tag->stylesheetLink('public/css/custom.css') ?>
         <!-- bootstrap 3.0.2 -->
         <?= $this->tag->stylesheetLink('public/backend/bootstrap/css/bootstrap.min.css') ?>
         <!-- font Awesome -->
@@ -15,7 +17,8 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
         <?= $this->tag->stylesheetLink('public/backend/dist/css/skins/_all-skins.min.css') ?>
-        
+         <!-- DataTables -->
+         <?= $this->tag->stylesheetLink('public/backend/plugins/datatables/dataTables.bootstrap.css') ?>
     </head>
     <body class="sidebar-mini skin-red">
 	<!-- header logo: style can be found in header.less -->

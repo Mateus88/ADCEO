@@ -17,12 +17,29 @@
 		<?= $this->tag->javascriptInclude('backend/dist/js/app.js') ?>
 		<!-- AdminLTE for demo purposes -->
 		<?= $this->tag->javascriptInclude('backend/dist/js/demo.js') ?>
+		<!-- DataTables -->
+		<?= $this->tag->javascriptInclude('backend/plugins/datatables/jquery.dataTables.min.js') ?>
+		<?= $this->tag->javascriptInclude('backend/plugins/datatables/dataTables.bootstrap.min.js') ?>
 		
 		<script type="text/javascript">
 			//Flash messages
 			$(".alert").slideUp(8000, function() {
 			    $(this).remove();
 			});
+		</script>
+		
+		<script>
+		  $(function () {
+		    $("#example1").DataTable();
+		    $('#example2').DataTable({
+		      "paging": true,
+		      "lengthChange": false,
+		      "searching": false,
+		      "ordering": true,
+		      "info": true,
+		      "autoWidth": false
+		    });
+		  });
 		</script>
 
     </body>

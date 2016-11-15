@@ -121,57 +121,37 @@
 				Indicators
 		
 			<ol class="carousel-indicators marginbottom">
-				<li data-target="#myCarousel" data-slide-to="0" class=""></li>
-				<li data-target="#myCarousel" data-slide-to="1" class=""></li>
-				<li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="2" class=""></li>
 			</ol>
 			<div class="carousel-inner maxheight">
 			 <?php $this->flash->output() ?>
-				<div class="item">
-					<img src="public/img/slider1.jpg" style="width: 100%"
+				<div class="item active">
+					<img src="public/img/ADCEO1.jpg" style="width: 100%"
 						alt="First slide">
 					<div class="container">
 						<div class="carousel-caption topcaption">
-							<h1>Slide 1</h1>
-							<p>Aenean a rutrum nulla. Vestibulum a arcu at nisi tristique
-								pretium.</p>
-							<p>
-								<a class="btn btn-md btn-primary btn-responsive" href="#"
-									role="button">Sign up today</a>
-							</p>
+							<h1>Iniciados</h1>
+							<p class="slideInfo">Vamos ajudá-los a encontrar a vitória.</p>
+							
 						</div>
 					</div>
 				</div>
 				<div class="item">
-					<img src="public/img/slider2.jpg" style="width: 100%" data-src=""
+					<img src="public/img/ADCEO2.jpg" style="width: 100%" data-src=""
 						alt="Second    slide">
 					<div class="container">
 						<div class="carousel-caption topcaption">
-							<h1>Slide 2</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-								vitae egestas purus.</p>
-							<p>
-								<a class="btn btn-md btn-primary btn-responsive" href="#"
-									role="button">Learn more</a>
-							</p>
+							<h1>Infantis</h1>
+							<p class="slideInfo">Vem apoiar os nossos jovens</p>
+<!-- 							<p> -->
+<!-- 								<a class="btn btn-md btn-primary btn-responsive" href="#" -->
+<!-- 									role="button">Learn more</a> -->
+<!-- 							</p> -->
 						</div>
 					</div>
 				</div>
-				<div class="item active">
-					<img src="public/img/slider2.jpg" style="width: 100%" data-src=""
-						alt="Third slide">
-					<div class="container">
-						<div class="carousel-caption topcaption ">
-							<h1>Slide 3</h1>
-							<p>Donec sit amet mi imperdiet mauris viverra accumsan ut at
-								libero.</p>
-							<p>
-								<a class="btn btn-md btn-primary btn-responsive" href="#"
-									role="button">Browse gallery</a>
-							</p>
-						</div>
-					</div>
-				</div>
+				
 			</div>
 			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left"></span>
@@ -196,26 +176,29 @@
 		<div class="row">
 			<div id="posts">
 				<div class="post">
-					<img src="public/img/slider1.jpg" />
+					<img src="public/img/ADCEO1.jpg" />
 					<div class="post-content">
-						<h2>Title 1</h2>
-						<p>Description 1 click aqui para ver mais </p>
+						<h2>Resumo do jogo</h2>
+						<p>ADCEO vs Visitante </p><br>
+						<p>DOM 10h30 20/11/16 </p>
 						<a href="#">View more</a>
 					</div>
 				</div>
-				<div class="post ">
-					<img src="public/img/slider2.jpg" />
+				<div class="post">
+					<img src="public/img/ADCEO2.jpg" />
 					<div class="post-content">
-						<h2>Title 2</h2>
-						<p>Description 2</p>
+						<h2>Jogo</h2>
+						<p>ADCEO vs Visitante </p><br>
+						<p>DOM 10h30 20/11/16 </p>
 						<a href="#">View more</a>
 					</div>
 				</div>
-				<div class="post ">
-					<img src="public/img/slider3.jpg" />
+				<div class="post">
+					<img src="public/img/ADCEO3.jpg" />
 					<div class="post-content">
-						<h2>Title 3</h2>
-						<p>Description 3</p>
+						<h2>Jogo</h2>
+						<p>ADCEO vs Visitante </p><br>
+						<p>DOM 10h30 20/11/16 </p>
 						<a href="#">View more</a>
 					</div>
 				</div>
@@ -223,28 +206,31 @@
 		</div>
 		<div class="row">
 			<div id="posts">
-				<div class="post ">
-					<img src="public/img/slider2.jpg" />
+				<div class="post">
+					<img src="public/img/ADCEO4.jpg" />
 					<div class="post-content">
-						<h2>Title 4</h2>
-						<p>Description 4</p>
-						<a href="#">View more</a>
-					</div>
-				</div>
-				<div class="post ">
-					<img src="public/img/slider2.jpg" />
-					<div class="post-content">
-						<h2>Title 5</h2>
-						<p>Description 5</p>
+						<h2>Resumo do jogo</h2>
+						<p>ADCEO vs Visitante </p><br>
+						<p>DOM 10h30 20/11/16 </p>
 						<a href="#">View more</a>
 					</div>
 				</div>
 				<div class="post">
-					<img src="public/img/slider2.jpg" />
+					<img src="public/img/ADCEO5.jpg" />
 					<div class="post-content">
-						<h2>Title 6</h2>
-						<p>Description 6</p>
-						<a class="preview" href="images/portfolio/full/item1.png"><i class="fa fa-eye"></i> View</a>
+						<h2>Jogo</h2>
+						<p>ADCEO vs SLB </p><br>
+						<p>DOM 10h30 20/11/16 </p>
+						<a href="#">View more</a>
+					</div>
+				</div>
+				<div class="post">
+					<img src="public/img/ADCEO6.jpg" />
+					<div class="post-content">
+						<h2>Jogo</h2>
+						<p>ADCEO vs Visitante </p><br>
+						<p>DOM 10h30 20/11/16 </p>
+						<a href="#">View more</a>
 					</div>
 				</div>
 			</div>
@@ -267,55 +253,30 @@
 	<section>
 		<div class="row">
 			<div id="posts">
-				<div class="post ">
-					<img src="public/img/vs.jpg" />
+				<div class="post">
+					<img src="public/img/ADCEO1.jpg" />
 					<div class="post-content">
-						<h1>29 Out 2016</h1>
-                          <h2>FUTEBOL</h2>
-                          <p>5ª Jornada - Torneio CIF</p>
-					</div>
-				</div>
-				<div class="post ">
-					<img src="public/img/vs.jpg" />
-					<div class="post-content">
-						<h1>29 Out 2016</h1>
-                          <h2>FUTEBOL</h2>
-                          <p>5ª Jornada - Torneio CIF</p>
-					</div>
-				</div>
-				<div class="post ">
-					<img src="public/img/vs.jpg" />
-					<div class="post-content">
-						<h1>29 Out 2016</h1>
-                          <h2>FUTEBOL</h2>
-                          <p>5ª Jornada - Torneio CIF</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div id="posts">
-				<div class="post ">
-					<img src="public/img/slider2.jpg" />
-					<div class="post-content">
-						<h2>Title 4</h2>
-						<p>Description 4</p>
+						<h2>Jogo</h2>
+						<p>ADCEO vs Visitante </p><br>
+						<p>DOM 10h30 20/11/16 </p>
 						<a href="#">View more</a>
 					</div>
 				</div>
-				<div class="post ">
-					<img src="public/img/slider2.jpg" />
+				<div class="post">
+					<img src="public/img/evento1.jpg" />
 					<div class="post-content">
-						<h2>Title 5</h2>
-						<p>Description 5</p>
+						<h2>Jogo</h2>
+						<p>ADCEO vs Visitante </p><br>
+						<p>DOM 10h30 20/11/16 </p>
 						<a href="#">View more</a>
 					</div>
 				</div>
-				<div class="post ">
-					<img src="public/img/slider2.jpg" />
+				<div class="post">
+					<img src="public/img/natal.jpg" />
 					<div class="post-content">
-						<h2>Title 6</h2>
-						<p>Description 6</p>
+						<h2>Evento</h2>
+						<p>Ceia de natal</p><br>
+						<p>DOM 12h30 23/12/16 </p>
 						<a href="#">View more</a>
 					</div>
 				</div>
@@ -333,7 +294,7 @@
 		 <div class="container">
 		 	<div class="row centered">
 			 	<h3>Patrocinadores</h3>
-			 	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+			 	<p class="lead">Os nossos apoios , que nos permitem um crescimento sustentável</p>
 			 	<div class="col-lg-3 col-md-3 col-sm-3">
 			 		<img src="public/img/pattern1.png" class="img-responsive">
 			 	</div>
@@ -467,8 +428,6 @@
 				  
 		// This is called with the results from from FB.getLoginStatus().
 		  function statusChangeCallback(response) {
-		    console.log('statusChangeCallback');
-		    console.log(response);
 		    // The response object is returned with a status field that lets the
 		    // app know the current login status of the person.
 		    // Full docs on the response object can be found in the documentation
@@ -497,7 +456,8 @@
 		
 		  window.fbAsyncInit = function() {
 			  FB.init({
-			    appId      : '327831930929515',
+			   // appId      : '327831930929515', // local App ID
+			    appId	   : '716470275174309', // Qual App ID
 			    xfbml      : true,
 			    version    : 'v2.3',
 			    status     : true,

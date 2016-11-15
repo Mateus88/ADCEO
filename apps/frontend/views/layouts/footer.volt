@@ -6,7 +6,7 @@
 		 <div class="container">
 		 	<div class="row centered">
 			 	<h3>Patrocinadores</h3>
-			 	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+			 	<p class="lead">Os nossos apoios , que nos permitem um crescimento sustentável</p>
 			 	<div class="col-lg-3 col-md-3 col-sm-3">
 			 		<img src="public/img/pattern1.png" class="img-responsive">
 			 	</div>
@@ -140,8 +140,6 @@
 				  
 		// This is called with the results from from FB.getLoginStatus().
 		  function statusChangeCallback(response) {
-		    console.log('statusChangeCallback');
-		    console.log(response);
 		    // The response object is returned with a status field that lets the
 		    // app know the current login status of the person.
 		    // Full docs on the response object can be found in the documentation
@@ -170,7 +168,7 @@
 		
 		  window.fbAsyncInit = function() {
 			  FB.init({
-			  //  appId      : '327831930929515', // local App ID
+			   // appId      : '327831930929515', // local App ID
 			    appId	   : '716470275174309', // Qual App ID
 			    xfbml      : true,
 			    version    : 'v2.3',
