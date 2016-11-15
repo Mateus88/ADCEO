@@ -104,9 +104,9 @@
 				<div class="post">
 					<img src="public/img/evento1.jpg" />
 					<div class="post-content">
-						<h2>Jogo</h2>
-						<p>ADCEO vs Visitante </p><br>
-						<p>DOM 10h30 20/11/16 </p>
+						<h2>Evento</h2>
+						<p>Corrida São Silvestre </p><br>
+						<p>SEX 21h00 30/12/16 </p>
 						<a href="#">View more</a>
 					</div>
 				</div>
