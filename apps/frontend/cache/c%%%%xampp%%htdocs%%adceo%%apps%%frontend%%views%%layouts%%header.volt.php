@@ -10,6 +10,7 @@
 			   <?= $this->tag->stylesheetLink('public/css/custom.css') ?>
 			   <?= $this->tag->stylesheetLink('public/font-awesome/css/font-awesome.min.css') ?>
 			   <?= $this->tag->stylesheetLink('public/css/timelify.css') ?>
+			   <?= $this->tag->stylesheetLink('public/css/hover_pack.css') ?>
 		</head>
 	<body>
 	<header>
@@ -36,22 +37,29 @@
 		                <li><a href="#">Contactos</a></li>
 		                <li><a href="#">Horários</a></li>
 		                <li><a href="#">Prémios e distinções</a></li>
+		                <li><a href="#">Galerias de fotografias</a></li>
 		              </ul>
 		            </li>
 		            <li class="dropdown">
-		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agenda <span class="caret"></span></a>
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modalidades <span class="caret"></span></a>
 		              <ul class="dropdown-menu">
+		                <li><a href="#">Futebol</a></li>
+		                <li><a href="#">Voleibol</a></li>
 		                <li><a href="#">Calendário</a></li>
 		                <li><a href="#">Jogos</a></li>
 		              </ul>
 		            </li>
-		            <li><a href="#contact">Área de Sócio</a></li>
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Área de Sócio <span class="caret"></span></a>
+		              <ul class="dropdown-menu">
+		                <li><a href="#">E-escola</a></li>
+		                <li><a href="#">Campo de férias</a></li>
+		                <li><a href="#">Festas de aniversário</a></li>
+		              </ul>
+		            </li>
 		            <li><a href="#contact">Notícias</a></li>
-		            <li><a href="#contact">E-escola</a></li>
 		            <li><a href="#contact">Loja</a></li>
-		            <li><a href="#contact">Campo de férias</a></li>
-		            <li><a href="#contact">Festas de aniversário</a></li>
-		            <li><a href="#contact">Patrocinadores</a></li>
+		            <li><a href="#contact">Apoios</a></li>
 		          </ul>
 		          <?php if (!empty($user)) { ?> 
 		           <ul class="nav navbar-nav navbar-right">

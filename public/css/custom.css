@@ -54,6 +54,10 @@ body
 	margin-top: 8% !important;
 }
 
+.margin-top-50{
+	margin-top: 50px;
+}
+
 /* ul.socialNetwork {padding:0; display: block; margin-bottom: 0;} */
 /* ul.socialNetwork li {display:inline-block; list-style-type: none; margin-top: 0.8em;} */
 
@@ -508,7 +512,32 @@ body
     padding: 22px;
 }
 
-/* END NEWS
+/* END NEWS 
+================================================== */
+
+
+/* NEWS v2
+================================================== */
+.title {
+  color: #6d6d6d;
+  font-family: "fs_hackney_webbold",sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.title:hover{
+   color: #6d6d6d;
+   text-decoration: none;
+   font-weight: 600;
+}
+
+.imageNews{
+	width: 350px;
+	height: 350px;
+}
+    
+    /* END NEWS v2
 ================================================== */
 /* PATTERNS
 ================================================== */
@@ -651,3 +680,78 @@ footer i:hover {
 
 /* END Backend All css
 ================================================== */
+
+/* Description Styling / Used in portfolio & Blog images footnotes */
+.desc p {
+	font-family: 'Ruda', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	margin-top: 10px;
+}
+
+.desc p > i {
+	font-size: 16px;
+	color: #676767;
+}
+
+.desc p > i:hover {
+	font-size: 16px;
+	color: #e74c3c;
+	cursor: pointer;
+}
+
+.desc p.leadNews {
+    font-family: 'Ruda', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+    color: #97979a;
+}
+
+.desc p.time {
+    font-family: 'Ruda', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 10px;
+	color: #676767;
+	text-align: right;
+}
+
+.desc p.time > i {
+	font-size: 12px;
+}
+
+
+/* Dashed Separator */
+
+hr-d {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px dashed #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+p.capitalize {
+	display:block;
+	text-align: left;
+}
+
+p.capitalize:first-letter {
+	text-transform:capitalize; 
+	font-size: 30px;
+	font-family: 'Ruda', sans-serif;
+	font-weight: 400;
+	color:white; 
+	padding-left:10px; 
+	padding-right:10px; 
+	margin-right:5px;
+}
+
+.marginNews{
+	margin-top:30px;
+}
+

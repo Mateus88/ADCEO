@@ -1,3 +1,4 @@
+<!-- For support the charecters UTF8 -->
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<aside class="main-sidebar">
 		<!-- sidebar: style can be found in sidebar.less -->

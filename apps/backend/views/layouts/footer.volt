@@ -1,3 +1,4 @@
+<!-- For support the charecters UTF8 -->
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<footer class="main-footer">
 		<div class="pull-right hidden-xs">

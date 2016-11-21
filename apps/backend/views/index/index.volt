@@ -1,6 +1,6 @@
 {%include "layouts/header.volt" %}
 {%include "layouts/sidebar.volt" %}
-
+<!-- For support the charecters UTF8 -->
 <div class="content-wrapper" style="min-height: 1101px;">
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
