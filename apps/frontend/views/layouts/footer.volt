@@ -2,7 +2,7 @@
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 {%if page =="Home"%}
 <!-- Begin section patterns -->
-<section class="pattern">
+<section class="pattern col-md-12">
 	<div id="cwrap">
 		 <div class="container">
 		 	<div class="row centered">
@@ -26,7 +26,7 @@
 </section>
 {%endif%}
 <!-- End section patterns -->
-<footer>
+<footer class="col-md-12">
 	 	<div class="container">
 		 	<div class="row">
 		 		<div class="col-lg-4">
@@ -112,6 +112,14 @@
 {{ javascript_include("js/filterable.js") }}
 {{ javascript_include("js/filterable.pack.js") }}
 {{ javascript_include("js/jquery.timelify.js") }}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v2.8&appId=327831930929515";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <script>
     //Flash messages
 	$(".alert").slideUp(8000, function() {
